@@ -39,5 +39,5 @@ D:\xampp\htdocs\netcore\obj\Debug\net5.0\netcore.pdb
 D:\xampp\htdocs\netcore\obj\Debug\net5.0\netcore.genruntimeconfig.cache
 D:\xampp\htdocs\netcore\obj\Debug\net5.0\netcore.csproj.CopyComplete
 D:\xampp\htdocs\netcore\obj\Debug\net5.0\Razor\Views\Shared\_Demo.cshtml.g.cs
-D:\xampp\htdocs\netcore\obj\Debug\net5.0\Razor\Views\Demo\GetName.cshtml.g.cs
 D:\xampp\htdocs\netcore\obj\Debug\net5.0\Razor\Views\Demo\Index.cshtml.g.cs
+D:\xampp\htdocs\netcore\obj\Debug\net5.0\Razor\Views\Demo\welcome.cshtml.g.cs

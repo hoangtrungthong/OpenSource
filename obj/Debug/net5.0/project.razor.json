@@ -15619,11 +15619,6 @@
   "RootNamespace": "netcore",
   "Documents": [
     {
-      "FilePath": "d:\\xampp\\htdocs\\netcore\\Views\\Demo\\GetName.cshtml",
-      "TargetPath": "Views\\Demo\\GetName.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "d:\\xampp\\htdocs\\netcore\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -15651,6 +15646,11 @@
     {
       "FilePath": "d:\\xampp\\htdocs\\netcore\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\xampp\\htdocs\\netcore\\Views\\Demo\\welcome.cshtml",
+      "TargetPath": "Views\\Demo\\welcome.cshtml",
       "FileKind": "mvc"
     },
     {
