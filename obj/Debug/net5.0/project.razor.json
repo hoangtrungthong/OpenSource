@@ -15639,6 +15639,26 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\xampp\\htdocs\\netcore\\Views\\Products\\Edit.cshtml",
+      "TargetPath": "Views\\Products\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\xampp\\htdocs\\netcore\\Views\\Products\\Create.cshtml",
+      "TargetPath": "Views\\Products\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\xampp\\htdocs\\netcore\\Views\\Products\\Details.cshtml",
+      "TargetPath": "Views\\Products\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\xampp\\htdocs\\netcore\\Views\\Products\\Delete.cshtml",
+      "TargetPath": "Views\\Products\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\xampp\\htdocs\\netcore\\Views\\Shared\\_Demo.cshtml",
       "TargetPath": "Views\\Shared\\_Demo.cshtml",
       "FileKind": "mvc"
@@ -15666,6 +15686,11 @@
     {
       "FilePath": "d:\\xampp\\htdocs\\netcore\\Views\\Demo\\Index.cshtml",
       "TargetPath": "Views\\Demo\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\xampp\\htdocs\\netcore\\Views\\Products\\Index.cshtml",
+      "TargetPath": "Views\\Products\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],
