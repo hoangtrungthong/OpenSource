@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using netcore.Data;
 
 namespace netcore
 {
@@ -28,19 +29,18 @@ namespace netcore
         {
             services.AddControllersWithViews(); 
             services.AddDbContext<ApplicationContext>(options =>
-        {
-            var connectionString = Configuration.GetConnectionString("ApplicationContext");
+            {
+                var connectionString = Configuration.GetConnectionString("ApplicationContext");
 
-            if (Environment.IsDevelopment())
-            {
-                options.UseSqlite(connectionString);
-            }
-            else
-            {
-                options.UseSqlServer(connectionString);
-            }
-        });
-           
+                if (Environment.IsDevelopment())
+                {
+                    options.UseSqlite(connectionString);
+                }
+                else
+                {
+                    options.UseSqlServer(connectionString);
+                }
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

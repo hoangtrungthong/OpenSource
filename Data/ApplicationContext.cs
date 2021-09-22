@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using netcore.Models;
 
-    public class ApplicationContext : DbContext
+namespace netcore.Data 
+{
+     public class ApplicationContext : DbContext
     {
         public ApplicationContext (DbContextOptions<ApplicationContext> options)
             : base(options)
@@ -14,3 +16,5 @@ using netcore.Models;
 
         public DbSet<netcore.Models.Product> Product { get; set; }
     }
+}
+   
