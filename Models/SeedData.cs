@@ -26,7 +26,8 @@ namespace netcore.Models
                         Name = "When Harry Met Sally",
                         Time = DateTime.Parse("1989-2-12"),
                         Description = "Romantic Comedy",
-                        Price = 7.99M
+                        Price = 7.99M,
+                        Rating = "Very good"
                     },
 
                     new Product
@@ -34,7 +35,8 @@ namespace netcore.Models
                         Name = "Ghostbusters ",
                         Time = DateTime.Parse("1984-3-13"),
                         Description = "Comedy",
-                        Price = 8.99M
+                        Price = 8.99M,
+                        Rating = "Very good"
                     },
 
                     new Product
@@ -42,7 +44,8 @@ namespace netcore.Models
                         Name = "Ghostbusters 2",
                         Time = DateTime.Parse("1986-2-23"),
                         Description = "Comedy",
-                        Price = 9.99M
+                        Price = 9.99M,
+                        Rating = "Very good"
                     },
 
                     new Product
@@ -50,7 +53,8 @@ namespace netcore.Models
                         Name = "Rio Bravo",
                         Time = DateTime.Parse("1959-4-15"),
                         Description = "Western",
-                        Price = 3.99M
+                        Price = 3.99M,
+                        Rating = "Very good"
                     }
                 );
                 context.SaveChanges();

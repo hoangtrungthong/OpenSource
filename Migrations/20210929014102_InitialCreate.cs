@@ -26,8 +26,7 @@ namespace netcore.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Product");
+            migrationBuilder.DropTable(name: "Product");
         }
     }
 }

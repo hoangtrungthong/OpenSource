@@ -20,9 +20,37 @@ namespace netcore.Controllers
         }
 
         // GET: Products
-        public async Task<IActionResult> Index()
+       
+        public async Task<IActionResult> Index(string productPrice, string searchString)
+        { 
+           // query price
+             IQueryable<decimal> priceQuery = from m in _context.Product orderby m.Time select m.Price;
+            
+            var products = from m in _context.Product select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(s => s.Name.Contains(searchString));
+            }
+            // search price
+             if (!string.IsNullOrEmpty(productPrice))
+            {
+                var price = Convert.ToDecimal(productPrice);
+                products = products.Where(x => x.Price == price);
+            }
+
+            var productSearch = new ProductPriceViewModel
+            {
+                Price = new SelectList(await priceQuery.Distinct().ToListAsync()),
+                Products = await products.ToListAsync()
+            };
+
+            return View(productSearch);
+        }
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
         {
-            return View(await _context.Product.ToListAsync());
+             return "From [HttpPost]Index: filter on " + searchString;
         }
 
         // GET: Products/Details/5
@@ -54,7 +82,7 @@ namespace netcore.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Time,Description,Price")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,Name,Time,Description,Price,Rating")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +114,7 @@ namespace netcore.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Time,Description,Price")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Time,Description,Price,Rating")] Product product)
         {
             if (id != product.Id)
             {
